@@ -4,7 +4,7 @@
     $db_user = 'psyaa21_COMP1004';
     $db_pass = 'Winter1004'; 
     $conn = new mysqli($db_host, $db_user, $db_pass, $db_name); 
-    if ($conn->connect_errno) die("failed to connect to database\n</body>\n</html>"); 
+    if ($conn->connect_errno) {die("failed to connect to database\n</body>\n</html>");} 
     $sql="SELECT mvID,mvTitle FROM Movie ORDER BY mvID DESC";
     $stmt = $conn->prepare($sql);
     $stmt->execute();
