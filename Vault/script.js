@@ -16,7 +16,6 @@ function passwordMatch(form, x) {
     if(password === passwords[x-1]){
         document.getElementById("letter1Link").hidden = false;
         localStorage.setItem("letter1", "unlocked");
-        form.hide();
         return;
     }
     document.getElementById("incorrect1").hidden = false;
