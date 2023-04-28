@@ -1,9 +1,23 @@
-
+const passwords = ["DREAMLAND"]
 function menuToggle(x) {
     x.classList.toggle("change");
 
     document.getElementById("menuDropdown").style.width = document.getElementById("menuDropdown").style.width == "150px" ? "0" : "150px";
     document.getElementById("main").style.marginLeft = document.getElementById("main").style.marginLeft == "150px" ? "0" : "150px";
+}
+
+function passwordMatch(form, x) {
+    var password;
+    for (var i=0;i<form.length;i++){
+        if(form.elements[i].name == "password"){
+            password = form.elements[i].value;
+        }
+    }
+    if(password === passwords[x-1]){
+        document.getElementById("letter1Link").hidden = false;
+        localStorage.setItem("letter1", "unlocked");
+    }
+
 }
 
 $(document).ready(function() {

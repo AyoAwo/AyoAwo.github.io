@@ -35,10 +35,10 @@
               
                 <div class="card-body">
                   <h5 class="card-title">Letter #1</h5>
-                  <form name="passwordForm1" action="">
+                  <form name="passwordForm1" onsubmit="return passwordMatch(this, 1)">
                     <div class="input-group mb-3" >
                       <span class="input-group-text" id="basic-addon1">&#128274;</span>
-                      <input type="password" id="inputPassword1" class="form-control" placeholder="Password" aria-label="Password" aria-describedby="basic-addon1">
+                      <input type="password" id="inputPassword1" name="password" class="form-control" placeholder="Password" aria-label="Password" aria-describedby="basic-addon1">
                       <button type="submit" class="btn btn-success" value="submit">&#8680;</button>
                     </div>
                   </form>
