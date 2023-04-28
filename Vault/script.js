@@ -16,12 +16,17 @@ function passwordMatch(form, x) {
     if(password === passwords[x-1]){
         document.getElementById("letter1Link").hidden = false;
         localStorage.setItem("letter1", "unlocked");
+        form.hide();
+        return;
     }
+    document.getElementById("incorrect1").hidden = false;
+    return;
 
 }
 
 $(document).ready(function() {
     document.getElementById("letter1Link").hidden = true;
+    document.getElementById("incorrect1").hidden = true;
     let letter1 = localStorage.getItem("letter1");
     if(letter1 != null){
         document.getElementById("letter1Link").hidden = false;
