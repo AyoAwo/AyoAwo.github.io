@@ -1,3 +1,4 @@
+document.getElementById("letter1Link").hidden = true;
 function menuToggle(x) {
     x.classList.toggle("change");
 
@@ -5,9 +6,10 @@ function menuToggle(x) {
     document.getElementById("main").style.marginLeft = document.getElementById("main").style.marginLeft == "150px" ? "0" : "150px";
 }
 
-$(document).ready(function(){
+$(document).ready(function() {
+   
     let letter1 = localStorage.getItem("letter1");
     if(letter1 != null){
-
+        document.getElementById("letter1Link").hidden = false;
     }
 })
