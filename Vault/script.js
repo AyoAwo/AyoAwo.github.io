@@ -1,4 +1,4 @@
-document.getElementById("letter1Link").hidden = true;
+
 function menuToggle(x) {
     x.classList.toggle("change");
 
@@ -7,7 +7,7 @@ function menuToggle(x) {
 }
 
 $(document).ready(function() {
-   
+    document.getElementById("letter1Link").hidden = true;
     let letter1 = localStorage.getItem("letter1");
     if(letter1 != null){
         document.getElementById("letter1Link").hidden = false;
