@@ -1,4 +1,5 @@
 const passwords = ["DREAMLAND"]
+
 function menuToggle(x) {
     x.classList.toggle("change");
 
