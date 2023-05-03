@@ -18,20 +18,23 @@ myModalLl.addEventListener('show.bs.modal', event => {
         choices: ["Vampire Diaries", "Brooklyn nine-nine", "Family Guy"],
         correctAnswer: 0
     }, {
-        question: "Who do I hate?",
-        choices: ["Greg", "Samuel", "Rory"],
+        question: "Who's the prettiest girl in the world?",
+        choices: ["Catherine", "Caffo", "Me"],
         correctAnswer: 2
     }];
 
     var questionCounter = 0; //Tracks question number
     var selections = []; //Array containing user choices
     var quiz = $('#quiz'); //Quiz div object
+    var answers; //Later array containing button objects
 
     // Display initial question
+    $("#intro").show();
+    $("#restart").hide();
     displayNext();
 
-    // Click handler for the 'next' button
-    $('#submit').on('click', function (e) {
+    // Click handler for the 'submit' button
+    /*$('#submit').on('click', function (e) {
         e.preventDefault();
 
         // Suspend click listener during fade animation
@@ -46,16 +49,33 @@ myModalLl.addEventListener('show.bs.modal', event => {
             $("#answer").append('You gotta answer dummy');
             $("#answer").show();
         }else {
+        $("#intro").fadeOut();
         displayNext();
         questionCounter++;
         }
-    });
+    });*/
+    
+    
+    
+    // Function for storing answer
+    function submit() {
+        // Suspend click listener during fade animation
+        if(quiz.is(':animated')) {
+            return false;
+        }
+        selections[questionCounter] = +$('input[name="answer"]:checked').val();
+        
+        $("#intro").fadeOut();
+        displayNext();
+        questionCounter++;
+    };
     
     $('#restart').on('click', function (e) {
         e.preventDefault();
 
         questionCounter = 0;
         displayNext();
+        $('#restart').hide();
         return;
     });
 
@@ -80,15 +100,16 @@ myModalLl.addEventListener('show.bs.modal', event => {
 
     // Creates a list of the answer choices as radio inputs
     function createRadios(index) {
-        var radioList = $('<ul>');
+        var radioList = $('<div class="btn-group-vertical" role="group" aria-label="Basic radio toggle button group">');
         var item;
         var input = '';
         for (var i = 0; i < questions[index].choices.length; i++) {
-        item = $('<li>');
-        input = '<input type="radio" name="answer" value=' + i + ' />';
-        input += questions[index].choices[i];
-        item.append(input);
-        radioList.append(item);
+            item = $('<input type="radio" class="btn-check" name="answer" id="btnradio'+ i +'" value=' + ((index === questions.length-1) ? 2 : i) + ' autocomplete="off">');
+            input = '<label class="btn btn-outline-primary" for="btnradio'+ i +'">';
+            input += questions[index].choices[i];
+            input += '</label>';
+            radioList.append(item);
+            radioList.append(input);
         }
         return radioList;
     }
@@ -96,18 +117,16 @@ myModalLl.addEventListener('show.bs.modal', event => {
     // Displays next requested element
     function displayNext() {
         quiz.fadeOut(function() {
-        $("#answer, #alert").hide();
         $('#question').remove();
-        $("#next").hide();
-        $("#submit").show();
 
         if(questionCounter < questions.length){
             var nextQuestion = createQuestionElement(questionCounter);
             quiz.append(nextQuestion).fadeIn();
+            answers = document.querySelectorAll('input[name="answer"]');
+            answers.forEach(btn => {btn.addEventListener('click', function() {submit();});});
         }else {
             var scoreElem = displayScore();
             quiz.append(scoreElem).fadeIn();
-            $('#submit').hide();
         }
         });
     }
@@ -127,6 +146,7 @@ myModalLl.addEventListener('show.bs.modal', event => {
             score.append('The password is "DREAMLAND"');
         }
         else{
+        $("#restart").fadeIn();
         score.append('You got only got ' + numCorrect + ' out of ' +
                     questions.length + ' right, no password for you.');
         score.append('You can always try again though');

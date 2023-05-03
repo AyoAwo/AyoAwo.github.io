@@ -58,6 +58,9 @@ body {
     color: #f1f1f1;
 }
 
+.card {
+    background-color: #89cff0;
+}
 .modal-content {
     color: #000000;
 }

@@ -19,18 +19,22 @@
 
       <div id="main">
         <div class="banner">
-            <div class="menu-container" id="hi" onclick="menuToggle(this)"> 
+          <div class="row">
+            <div class="col-2 menu-container" id="hi" onclick="menuToggle(this)"> 
               <div class="bar1"></div>
               <div class="bar2"></div>
               <div class="bar3"></div> 
             </div>
+            <div class="col-8 "> Title Here</div>
+          </div>
+            
         </div>
         <br>
         
         <div class="container">
           <div class="row">
             <div class="col-sm-6 align-self-center">
-              <div class="card" style="background-color: #89cff0;">
+              <div class="card">
                 <img src="images/locked.png" class="card-img-top" alt="...">
               
                 <div class="card-body">
@@ -61,11 +65,8 @@
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-              ...
+              <div id="intro"><p>Well if you're really my girlfriend you should know the answers to these simple questions</p></div>
               <div id="quiz"></div>
-              <div id="alert"><p>Please make a selection!</p></div>
-              <div id="answer"></div>
-              <button class="btn-lg" id="submit">Submit</button>
               <div id="results"></div>
             </div>
             <div class="modal-footer">
