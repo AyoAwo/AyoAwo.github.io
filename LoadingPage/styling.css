@@ -41294,7 +41294,7 @@ a.u-link.u-text-hover-grey-90:hover {
 }
 
 .u-section-1 .u-countdown-label-2 {
-  font-size: 1.125rem;
+  font-size: 1rem;
   font-weight: 400;
   text-transform: none;
 }
@@ -41328,7 +41328,7 @@ a.u-link.u-text-hover-grey-90:hover {
 }
 
 .u-section-1 .u-countdown-label-3 {
-  font-size: 1.125rem;
+  font-size: 1rem;
   font-weight: 400;
   text-transform: none;
 }
@@ -41362,7 +41362,7 @@ a.u-link.u-text-hover-grey-90:hover {
 }
 
 .u-section-1 .u-countdown-label-4 {
-  font-size: 1.125rem;
+  font-size: 1rem;
   font-weight: 400;
   text-transform: none;
 }
@@ -41396,7 +41396,7 @@ a.u-link.u-text-hover-grey-90:hover {
 }
 
 .u-section-1 .u-countdown-label-5 {
-  font-size: 1.125rem;
+  font-size: 1rem;
   font-weight: 400;
   text-transform: none;
 }
@@ -41452,11 +41452,11 @@ a.u-link.u-text-hover-grey-90:hover {
 
 @media (max-width: 575px) {
   .u-section-1 .u-image-1 {
-    height: 287px;
+    height: 215px;
   }
 
   .u-section-1 .u-text-1 {
-    width: 340px;
+    width: 255px;
   }
 
   .u-section-1 .u-countdown-1 {
@@ -41465,46 +41465,46 @@ a.u-link.u-text-hover-grey-90:hover {
   }
 
   .u-section-1 .u-countdown-counter-1 {
-    font-size: 3.75rem;
+    font-size: 2.75rem;
   }
 
   .u-section-1 .u-countdown-separator-1 {
-    font-size: 3.75rem;
+    font-size: 2.75rem;
   }
 
   .u-section-1 .u-countdown-counter-2 {
-    font-size: 3.75rem;
+    font-size: 2.75rem;
   }
 
   .u-section-1 .u-countdown-separator-2 {
-    font-size: 3.75rem;
+    font-size: 2.75rem;
   }
 
   .u-section-1 .u-countdown-counter-3 {
-    font-size: 3.75rem;
+    font-size: 2.75rem;
   }
 
   .u-section-1 .u-countdown-separator-3 {
-    font-size: 3.75rem;
+    font-size: 2.75rem;
   }
 
   .u-section-1 .u-countdown-counter-4 {
-    font-size: 3.75rem;
+    font-size: 2.75rem;
   }
 
   .u-section-1 .u-countdown-separator-4 {
-    font-size: 3.75rem;
+    font-size: 2.75rem;
   }
 
   .u-section-1 .u-countdown-counter-5 {
-    font-size: 3.75rem;
+    font-size: 2.75rem;
   }
 
   .u-section-1 .u-countdown-separator-5 {
-    font-size: 3.75rem;
+    font-size: 2.75rem;
   }
 
   .u-section-1 .u-countdown-counter-6 {
-    font-size: 3.75rem;
+    font-size: 2.75rem;
   }
 }
