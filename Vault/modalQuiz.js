@@ -100,7 +100,7 @@ myModalLl.addEventListener('show.bs.modal', event => {
 
     // Creates a list of the answer choices as radio inputs
     function createRadios(index) {
-        var radioList = $('<div class="btn-group-vertical" role="group" aria-label="Basic radio toggle button group">');
+        var radioList = $('<div class="btn-group-vertical justify-content-center" role="group" aria-label="Basic radio toggle button group">');
         var item;
         var input = '';
         for (var i = 0; i < questions[index].choices.length; i++) {
@@ -133,7 +133,7 @@ myModalLl.addEventListener('show.bs.modal', event => {
 
     // Computes score and returns a paragraph element to be displayed
     function displayScore() {
-        var score = $('<p>',{id: 'question'});
+        var score = $('<p>',{id: 'question', style: 'text-align: center'});
 
         var numCorrect = 0;
         for (var i = 0; i < selections.length; i++) {
@@ -142,14 +142,14 @@ myModalLl.addEventListener('show.bs.modal', event => {
             }
         }
         if(numCorrect === questions.length){
-            score.append('Okay you got all my questions right, maybe you are my gf after all.');
-            score.append('The password is "DREAMLAND"');
+            score.append('Okay you got all my questions right, maybe you are my gf after all &#128580;');
+            score.append('<br> <span style="background-color: #d1ad1b">The password is "<span style="color:#3800cf;"><strong>DREAMLAND</strong></span>" </span>');
         }
         else{
         $("#restart").fadeIn();
         score.append('You got only got ' + numCorrect + ' out of ' +
-                    questions.length + ' right, no password for you.');
-        score.append('You can always try again though');
+                    questions.length + ' right, no password for you &#128542;');
+        score.append('<br>You can always try again though');
         }
         return score;
     }

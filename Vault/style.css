@@ -1,8 +1,11 @@
+@font-face { font-family: Adelia; src: url('assets/adelia.otf'); } 
 body {
     background-color: #a88ccc;
     color: #ffffff;
     font-family: Roboto,Helvetica,Arial,sans-serif;
-    font-weight: 12pt
+    font-weight: 12pt;
+    font-size : 18px;
+    
 }
 
 .bar1, .bar2, .bar3 {
@@ -49,7 +52,7 @@ body {
 .sidebar a {
     padding: 8px 8px 8px 32px;
     text-decoration: none;
-    font-size: 25px;
+    font-size: 24px;
     color: #818181;
     display: block;
     transition: 0.3s;
@@ -63,4 +66,12 @@ body {
 }
 .modal-content {
     color: #000000;
+}
+
+#letterContainer {
+    background-color: #f4dcb6;
+    color: black;
+    font-size : 22px;
+    box-sizing: border-box;
+    padding: 6px;
 }
