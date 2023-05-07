@@ -4,23 +4,28 @@ myModalLl.addEventListener('show.bs.modal', event => {
     var questions = [{
         question: "What do you want to be when you grow up?",
         choices: ["Librarian", "Dentist", "Teacher"],
-        correctAnswer: 1
+        correctAnswer: 1,
+        title: "So you don't know the password..."
     }, {
         question: "Which of these is your favourite colour?",
         choices: ["Gold", "Maroon", "Llilac"],
-        correctAnswer: 2
+        correctAnswer: 2,
+        title: "Next question !!!"
     }, {
         question: "Where did I take you to eat on our first date?",
         choices: ["Shakeshack", "Mcdonald's", "Nobu"],
-        correctAnswer: 0
+        correctAnswer: 0,
+        title: "Keep going..."
     }, {
         question: "What's our comfort show?",
         choices: ["Vampire Diaries", "Brooklyn nine-nine", "Family Guy"],
-        correctAnswer: 0
+        correctAnswer: 0,
+        title: "Almost there..."
     }, {
         question: "Who's the prettiest girl in the world?",
         choices: ["Catherine", "Caffo", "Me"],
-        correctAnswer: 2
+        correctAnswer: 2,
+        title: "Last one's a tough one"
     }];
 
     var questionCounter = 0; //Tracks question number
@@ -124,6 +129,9 @@ myModalLl.addEventListener('show.bs.modal', event => {
             quiz.append(nextQuestion).fadeIn();
             answers = document.querySelectorAll('input[name="answer"]');
             answers.forEach(btn => {btn.addEventListener('click', function() {submit();});});
+            $("#letter1Password").empty();
+            $("#letter1Password").append(questions[questionCounter].title);
+            $("#letter1Password").show();
         }else {
             var scoreElem = displayScore();
             quiz.append(scoreElem).fadeIn();
@@ -142,14 +150,20 @@ myModalLl.addEventListener('show.bs.modal', event => {
             }
         }
         if(numCorrect === questions.length){
+            $("#letter1Password").empty();
+            $("#letter1Password").append("You did it!");
+            $("#letter1Password").show();
             score.append('Okay you got all my questions right, maybe you are my gf after all &#128580;');
             score.append('<br> <span style="background-color: #d1ad1b">The password is "<span style="color:#3800cf;"><strong>DREAMLAND</strong></span>" </span>');
         }
         else{
-        $("#restart").fadeIn();
-        score.append('You got only got ' + numCorrect + ' out of ' +
-                    questions.length + ' right, no password for you &#128542;');
-        score.append('<br>You can always try again though');
+            $("#letter1Password").empty();
+            $("#letter1Password").append("Yikes...");
+            $("#letter1Password").show();    
+            $("#restart").fadeIn();
+            score.append('You only got ' + numCorrect + ' out of ' +
+                        questions.length + ' right, no password for you &#128542;');
+            score.append('<br>You can always try again though');
         }
         return score;
     }
