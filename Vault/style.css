@@ -1,4 +1,5 @@
 @font-face { font-family: Adelia; src: url('assets/adelia.otf'); } 
+
 @font-face {
     font-family: 'freestyle_scriptregular';
     src: url('assets/freestyle_script_regular-webfont.eot');
@@ -11,6 +12,7 @@
     font-style: normal;
 
 }
+
 body {
     background-color: #a88ccc;
     color: #ffffff;
