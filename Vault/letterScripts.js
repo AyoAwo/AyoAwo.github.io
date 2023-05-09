@@ -11,5 +11,6 @@ if(letter1 == null){
 
 function revealSurprise(){
     var surprise = $('#surprise');
-    surprise.append('<iframe src="https://trinket.io/embed/python/77d3b4c614?outputOnly=true&runOption=run&start=result" width="320" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>').fadeIn();
+    surprise.empty();
+    surprise.append('<iframe src="https://trinket.io/embed/python/c91f5265c3?outputOnly=true&runOption=run&start=result" width="320" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>').fadeIn();
 }
