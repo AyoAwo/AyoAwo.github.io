@@ -25,6 +25,8 @@ $(document).ready(function() {
     document.getElementById("letter1Link").hidden = true;
     document.getElementById("incorrect1").hidden = true;
     document.getElementById("readLetter1").hidden = true;
+    document.getElementById("dinnerInvite").hidden = true;
+    document.getElementById("openInvite").hidden = true;
     var cardImage1 = $("#cardImg");
     let letter1 = localStorage.getItem("letter1");
     if(letter1 != null){
@@ -36,4 +38,18 @@ $(document).ready(function() {
     else {
         cardImage1.append('<img src="images/locked.png" class="card-img-top" alt="..."></img>');
     }
+    checkTime();
+
 })
+
+function checkTime() {
+    const anniversary = new Date(2023,7,1,23,0,0);
+    var date = new Date();
+    if(date > anniversary){
+        document.getElementById("dinnerInvite").hidden = false;
+        document.getElementById("openInvite").hidden = false;
+    }
+    else{
+        setTimeout(checkTime, 2500);
+    }
+}
