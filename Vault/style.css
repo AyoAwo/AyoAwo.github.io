@@ -1,13 +1,13 @@
-@font-face { font-family: Adelia; src: url('assets/adelia.otf'); } 
+@font-face { font-family: Adelia; src: url('assets/fonts/adelia.otf'); } 
 
 @font-face {
     font-family: 'freestyle_scriptregular';
-    src: url('assets/freestyle_script_regular-webfont.eot');
-    src: url('assets/freestyle_script_regular-webfont.eot?#iefix') format('embedded-opentype'),
-         url('assets/freestyle_script_regular-webfont.woff2') format('woff2'),
-         url('assets/freestyle_script_regular-webfont.woff') format('woff'),
-         url('assets/freestyle_script_regular-webfont.ttf') format('truetype'),
-         url('assets/freestyle_script_regular-webfont.svg#freestyle_scriptregular') format('svg');
+    src: url('assets/fonts/freestyle_script_regular-webfont.eot');
+    src: url('assets/fonts/freestyle_script_regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('assets/fonts/freestyle_script_regular-webfont.woff2') format('woff2'),
+         url('assets/fonts/freestyle_script_regular-webfont.woff') format('woff'),
+         url('assets/fonts/freestyle_script_regular-webfont.ttf') format('truetype'),
+         url('assets/fonts/freestyle_script_regular-webfont.svg#freestyle_scriptregular') format('svg');
     font-weight: normal;
     font-style: normal;
 
