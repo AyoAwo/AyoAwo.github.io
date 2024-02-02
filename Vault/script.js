@@ -27,6 +27,7 @@ $(document).ready(function() {
     document.getElementById("readLetter1").hidden = true;
     document.getElementById("dinnerInvite").hidden = true;
     document.getElementById("openInvite").hidden = true;
+    document.getElementById("openValentine").hidden = true;
     var cardImage1 = $("#cardImg1");
     let letter1 = localStorage.getItem("letter1");
     if(letter1 != null){
@@ -40,7 +41,7 @@ $(document).ready(function() {
     }
     checkTime(1,8,2023,"openInvite");
     checkTime(1,8,2023,"dinnerInvite");
-    checkTime(7,1,2024,"openValentine")
+    checkTime(7,2,2024,"openValentine")
 
 })
 
