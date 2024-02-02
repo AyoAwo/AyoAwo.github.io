@@ -1,5 +1,9 @@
 function nextPage() {
-    
+    $('#questionTitle').empty();
+    $('#questionTitle').append('Yippeeee!!!');
+    $("#gifBox").empty();
+    $("#gifBox").append('<img src="assets/images/bunnyhug.gif" style="height: 50vh; width: auto; background: none;" alt="Cute animated illustration">');
+    $('#btnGroup').empty();
 }
 
 function moveButton() {
