@@ -96,5 +96,6 @@
 
 @media (hover: hover) {
 .btn:hover {
-    /*Add your button hover styles here*/
+    background-color: #FFB6C1;
+    color: white;
 }}
