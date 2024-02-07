@@ -93,3 +93,8 @@
         font-size: 14px;
     }
 }
+
+@media (hover: hover) {
+.btn:hover {
+    /*Add your button hover styles here*/
+}}
