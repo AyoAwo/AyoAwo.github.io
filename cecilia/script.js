@@ -8,7 +8,7 @@ function passwordMatch(form, x) {
         }
     }
     if(password === passwords[x-1]){
-        location.href = 'poem.html';
+        location.href = 'letter.html';
         return true;
     }
     document.getElementById("incorrect1").hidden = false;
