@@ -7,13 +7,13 @@ function passwordMatch(form, x) {
             password = form.elements[i].value;
         }
     }
-    if(password === passwords[x-1]){
-        location.href = 'letter.html';
+    if(password.toUpperCase() === passwords[x-1]){
+        document.getElementById("incorrect1").hidden = true;
+        letterReveal();
         return true;
     }
     document.getElementById("incorrect1").hidden = false;
     return false;
-
 }
 
 $(document).ready(function() {
@@ -183,3 +183,10 @@ myModalLl.addEventListener('show.bs.modal', event => {
     }
 
 })
+
+
+function letterReveal(){
+    document.body.style.padding = null;
+    $('#main').remove();
+    $('body').append('<div class="container" id="main"><div class = "col-12" style="display: grid; height: 100%;"> <img src="assets/aLetterofLove.jpg" style="max-width: 100%; max-height: 100vh; margin: auto;"></div></div>');
+}
