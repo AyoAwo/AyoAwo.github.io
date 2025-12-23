@@ -5,7 +5,7 @@ function menuToggle(x) {
 const anniversary = new Date(2023,7,1,23,0,0);
 var date = new Date();
 if(date < anniversary){
-    if(window.location.href.indexOf("home.html") == -1){
-        location.replace("home.html");
+    if(window.location.href.indexOf("index.html") == -1){
+        location.replace("index.html");
     }
 }

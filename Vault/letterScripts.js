@@ -4,8 +4,8 @@ function menuToggle(x) {
 
 let letter1 = localStorage.getItem("letter1");
 if(letter1 == null){
-    if(window.location.href.indexOf("home.html") == -1){
-        location.replace("home.html");
+    if(window.location.href.indexOf("index.html") == -1){
+        location.replace("index.html");
     }        
 }
 
